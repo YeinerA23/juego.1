@@ -1,0 +1,17 @@
+[
+  {
+    "pregunta": "¿Cuál es el planeta más grande del sistema solar?",
+    "opciones": ["A) Marte", "B) Saturno", "C) Júpiter", "D) Neptuno"],
+    "respuesta": "C"
+  },
+  {
+    "pregunta": "¿Cuánto es 12 × 12?",
+    "opciones": ["A) 124", "B) 144", "C) 122", "D) 132"],
+    "respuesta": "B"
+  },
+  {
+    "pregunta": "¿Quién pintó la Mona Lisa?",
+    "opciones": ["A) Miguel Ángel", "B) Leonardo da Vinci", "C) Van Gogh", "D) Picasso"],
+    "respuesta": "B"
+  }
+]
