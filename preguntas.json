@@ -1,3 +1,4 @@
+
 [
   {
     "pregunta": "¿Cuál es el planeta más grande del sistema solar?",
@@ -13,5 +14,40 @@
     "pregunta": "¿Quién pintó la Mona Lisa?",
     "opciones": ["A) Miguel Ángel", "B) Leonardo da Vinci", "C) Van Gogh", "D) Picasso"],
     "respuesta": "B"
+  },
+  {
+    "pregunta": "¿En qué continente está Egipto?",
+    "opciones": ["A) Asia", "B) África", "C) Europa", "D) Oceanía"],
+    "respuesta": "B"
+  },
+  {
+    "pregunta": "¿Cuál es el océano más grande del mundo?",
+    "opciones": ["A) Atlántico", "B) Índico", "C) Ártico", "D) Pacífico"],
+    "respuesta": "D"
+  },
+  {
+    "pregunta": "¿Quién escribió 'Don Quijote de la Mancha'?",
+    "opciones": ["A) Gabriel García Márquez", "B) Miguel de Cervantes", "C) Lope de Vega", "D) Calderón de la Barca"],
+    "respuesta": "B"
+  },
+  {
+    "pregunta": "¿En qué año llegó Cristóbal Colón a América?",
+    "opciones": ["A) 1492", "B) 1500", "C) 1485", "D) 1512"],
+    "respuesta": "A"
+  },
+  {
+    "pregunta": "¿Cuál es el río más largo del mundo?",
+    "opciones": ["A) Amazonas", "B) Nilo", "C) Yangtsé", "D) Misisipi"],
+    "respuesta": "A"
+  },
+  {
+    "pregunta": "¿Cuál es el país con mayor población del mundo?",
+    "opciones": ["A) India", "B) China", "C) Estados Unidos", "D) Rusia"],
+    "respuesta": "B"
+  },
+  {
+    "pregunta": "¿Quién fue el primer hombre en pisar la Luna?",
+    "opciones": ["A) Neil Armstrong", "B) Buzz Aldrin", "C) Yuri Gagarin", "D) Michael Collins"],
+    "respuesta": "A"
   }
 ]
