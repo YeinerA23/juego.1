@@ -6,6 +6,13 @@ import tkinter as tk
 from tkinter import messagebox
 import json, random, os
 import pygame  # <-- Asegúrate de agregar esta línea
+import serial
+
+try:
+    arduino = serial.Serial("COM6", 9600, timeout=0.1)  # Ajusta COM si es necesario
+except Exception as e:
+    arduino = None
+    print("⚠️ No se pudo abrir el puerto serie:", e)
 
 
 pygame.init()
@@ -34,9 +41,9 @@ def cargar_sonido(nombre):
     return None
 
 snd_correcto   = cargar_sonido("correcto.mp3")
-snd_incorrecto = cargar_sonido("incorrecto.mp3")
+snd_incorrecto = cargar_sonido("sonido_incorrecto.mp3")
 snd_fin        = cargar_sonido("fin_juego.mp3")
-snd_perdedor = cargar_sonido("fin_perdido.mp3")
+snd_perdedor = cargar_sonido("")
 
 
 
@@ -118,6 +125,7 @@ def reiniciar_juego():
 # -------- Pantalla de inicio --------
 def iniciar_juego():
     # Detener música de fondo al iniciar el juego
+    
     pygame.mixer.music.stop()
 
     # Ocultar pantalla de inicio
@@ -191,5 +199,16 @@ def on_key(e):
     elif k == "R" and reiniciar_btn.winfo_ismapped():
         reiniciar_juego()
 ventana.bind("<KeyPress>", on_key)
+def leer_serial():
+    if arduino:
+        try:
+            if arduino.in_waiting > 0:
+                data = arduino.readline().decode("utf-8").strip().upper()
+                if data in ("A","B","C","D"):
+                    verificar_respuesta(data)
+        except Exception as e:
+            print("⚠️ Error leyendo serial:", e)
+    ventana.after(100, leer_serial)  # vuelve a ejecutarse cada 100 ms
+leer_serial()
 
 ventana.mainloop()
